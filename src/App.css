@@ -1,0 +1,13 @@
+.container-class {
+  padding: 10px 50px;
+}
+@media (max-width: 768px) {
+  .container-class {
+    padding: 10px 30px;
+  }
+}
+@media (max-width: 575px) {
+  .container-class {
+    padding: 10px 20px;
+  }
+}
