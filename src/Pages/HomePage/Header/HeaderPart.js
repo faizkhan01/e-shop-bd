@@ -1,19 +1,19 @@
 import { Button, Drawer } from "antd";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../../App";
-import cartIcon2 from "../../../cart2.png";
-import logo from "../../../logo.png";
+import cartIcon2 from "../../../assets/cart2.png";
+import logo from "../../../assets/logo.png";
 import MenuItems from "./MenuItems";
 const HeaderPart = () => {
   const [showDrader, setShowDrader] = useState(false);
-  const { cart, product } = useContext(CartContext);
-  const [cartItem, setCartItem] = cart;
+  const cartItem = useSelector((state) => state.cart.cart);
+
   return (
     <nav className="menu-bar">
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="" width="70px" />
+          <img src={logo} alt="" width="80px" style={{borderRadius: '50px'}} />
         </Link>
       </div>
 

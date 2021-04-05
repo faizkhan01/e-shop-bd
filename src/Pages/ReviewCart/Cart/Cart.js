@@ -1,10 +1,9 @@
 import { Button, Col, Row } from "antd";
-import React, { useContext } from "react";
+import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../../App";
 const Cart = (props) => {
-  const { cart, product } = useContext(CartContext);
-  const [cartItem, setCartItem] = cart;
+  const cartItem = useSelector((state) => state.cart.cart);
 
   let itemPrice = cartItem.reduce((total, curr) => {
     total += curr.price * curr.quantity;
@@ -14,6 +13,7 @@ const Cart = (props) => {
 
   const tax = ((itemPrice + shipping) * 5) / 100;
   const total = itemPrice + shipping + tax;
+  const data = { tax: tax, shipping: shipping, total: total };
   return (
     <div style={{ textAlign: "center", margin: "auto" }}>
       <h3>Order Review</h3>
@@ -40,7 +40,12 @@ const Cart = (props) => {
           </Col>
         </Row>
 
-        <Link to="/place-order">
+        <Link
+          to={{
+            pathname: "/place-order",
+            state: { data: data },
+          }}
+        >
           <Button type="default" style={{ width: "80%", borderRadius: "15px" }}>
             Place Order
           </Button>

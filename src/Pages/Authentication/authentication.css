@@ -3,7 +3,7 @@
 .auth-container {
   width: 100%;
   min-height: 100vh;
-  background-color: whitesmoke;
+  background-color: #40e0d0;
   display: flex;
   justify-content: space-around;
 }
@@ -26,8 +26,8 @@
   margin: auto;
 }
 .top img {
-  padding: 0px;
-  margin-top: -60px;
+  padding: 10px;
+  margin-top: 20px;
 }
 .top h3 {
   color: red;

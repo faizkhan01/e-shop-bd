@@ -1,19 +1,31 @@
 import { StarFilled } from "@ant-design/icons";
-import { Card, Col, Divider, Row } from "antd";
-import React, { useContext } from "react";
+import { Card, Col, Divider, Pagination, Row } from "antd";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { CartContext } from "../../../App";
+import { getImageUrl } from "../../../App";
+import { fetchProducts } from "../../../Store/Actions/ProductActions";
 const HomeContent = (props) => {
-  const { cart, product } = useContext(CartContext);
-  const [products, setProducts] = product;
+  const products = useSelector((state) => state.products.products);
+  const count = useSelector((state) => state.products.count);
+  const [pageNumber, setPageNumber] = useState(1);
+  const dispatch = useDispatch();
   const filterProduct = products?.filter((product) =>
     product.title.toLowerCase().includes(props.searchInput.toLowerCase())
   );
+  const hadlePageChange = (page = 1) => {
+    setPageNumber(page);
+    dispatch(fetchProducts(page));
+  };
+  useEffect(() => {
+    dispatch(fetchProducts(1));
+  }, []);
   return (
     <div style={{ padding: "10px" }}>
       <Row style={{ justifyContent: "space-around" }}>
         {filterProduct?.map((dt) => (
           <Col
+            key={dt._id}
             sm={16}
             md={11}
             lg={7}
@@ -24,8 +36,9 @@ const HomeContent = (props) => {
             }}
           >
             <Link to={`/product-details/${dt._id}`}>
-              <Card hoverable cover={<img alt="example" src={dt.image} />}>
+              <Card hoverable cover={<img src={getImageUrl(dt.image)} alt="productimage" />}>
                 <Divider />
+
                 <h3> {dt.title}</h3>
                 <div
                   style={{ display: "flex", justifyContent: "space-between" }}
@@ -33,7 +46,7 @@ const HomeContent = (props) => {
                   <h3>Price: {dt.price}</h3>
                   <h3>
                     <span style={{ paddingRight: "5px" }}>Rating:</span>
-                    {Array.from(Array(3), (e) => (
+                    {Array.from(Array(5), (e) => (
                       <span style={{ paddingLeft: "2px" }}>
                         <StarFilled
                           style={{ color: "orange", fontSize: "20px" }}
@@ -47,6 +60,14 @@ const HomeContent = (props) => {
           </Col>
         ))}
       </Row>
+      <div style={{ margin: "auto" }}>
+        <Pagination
+          current={pageNumber}
+          total={count}
+          onChange={hadlePageChange}
+          pageSize={9}
+        />
+      </div>
     </div>
   );
 };

@@ -1,19 +1,21 @@
 import {
   ADD_TO_CART,
   DECREASE_ITEM_QUANTITY,
+  EMPTY_CART_ITEM,
   INCREASE_ITEM_QUANTITY,
-  REMOVE_FROM_CART,
+  REMOVE_FROM_CART
 } from "../Actions/CartAction";
 
 const INITIAL_STATE = {
   cart: [],
 };
 const cartReducer = (state = INITIAL_STATE, action) => {
-  switch (action) {
-    case ADD_TO_CART:
+  switch (action.type) {
+    case ADD_TO_CART: {
       return {
         cart: [...state.cart, action.payload],
       };
+    }
     case REMOVE_FROM_CART: {
       const filterItem = state.cart.filter(
         (item) => item._id !== action.payload
@@ -39,7 +41,11 @@ const cartReducer = (state = INITIAL_STATE, action) => {
       }
       return state;
     }
-
+    case EMPTY_CART_ITEM:
+      return {
+        ...state,
+        cart: [],
+      };
     default:
       return state;
   }
