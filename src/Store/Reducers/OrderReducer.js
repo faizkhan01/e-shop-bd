@@ -4,7 +4,7 @@ import {
   FETCH_ORDER_SUCCESS,
   MAKE_ORDER,
   UPDATE_ORDER_STATUS,
-  USER_ORDER
+  USER_ORDER,
 } from "../Actions/OrderAction";
 
 const INITIAL_STATE = {

@@ -6,7 +6,7 @@
   overflow: scroll !important;
 }
 .admin-container .ant-layout-sider-children {
-  color: #40e0d0 !important;
+  color: white !important;
   height: 0px !important;
   min-height: 100vh !important;
 }
@@ -24,7 +24,7 @@
 }
 .ant-menu.ant-menu-dark .ant-menu-item-selected,
 .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
-  background-color: goldenrod;
+  background-color: black;
 }
 
 .ant-table {
@@ -44,7 +44,7 @@
 .admin-header-container {
   display: flex;
   width: 100%;
-  background-color: goldenrod !important;
+  background-color: #03080e !important;
   color: white !important;
   justify-content: space-between;
   padding: 16px 40px;

@@ -4,7 +4,7 @@ import {
   LOGIN_FAILURE,
   LOGIN_SUCCESS,
   LOGOUT,
-  UPDATE_LOGIN_USER
+  UPDATE_LOGIN_USER,
 } from "../Actions/AutheticationAction";
 
 const INITIAL_STATE = {

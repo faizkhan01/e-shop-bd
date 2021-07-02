@@ -12,9 +12,9 @@ const AdminHeader = () => {
   return (
     <div className="admin-header-container">
       <div className="left">
-        <Button disabled={true}>Howdy!!! Admin</Button>
+        <Button disabled={true}>Hi! Admin</Button>
       </div>
-      <div className="right" style={{backgroundColor: 'blueviolet'}}>
+      <div className="right">
         <Button onClick={handleLogout}>Logout</Button>
       </div>
     </div>

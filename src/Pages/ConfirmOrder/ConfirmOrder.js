@@ -94,7 +94,7 @@ const ConfirmOrder = () => {
     </Form.Item>
   );
   return (
-    
+    // <div>{orders.loading ? <LoadingComponent /> : <h2>Complete Order</h2>}</div>
     <div>
       {loading && <LoadingComponent />}
       <Modal
@@ -132,7 +132,7 @@ const ConfirmOrder = () => {
             <Input addonBefore={prefixSelector} />
           </Form.Item>
           <Form.Item
-            label="Pickup Addredd"
+            label="Pickup Address"
             name="address"
             rules={[
               {

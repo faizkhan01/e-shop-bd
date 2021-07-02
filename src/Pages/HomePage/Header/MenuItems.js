@@ -22,8 +22,7 @@ const MenuItems = () => {
       <Menu.Item key="home">
         <NavLink to="/">Home</NavLink>
       </Menu.Item>
-      
-          <Menu.Item key="blog">
+      <Menu.Item key="blog">
         <NavLink to="/review-order">Review Cart</NavLink>
       </Menu.Item>
 
@@ -38,10 +37,10 @@ const MenuItems = () => {
             <NavLink to="" disabled>
               Logout
             </NavLink>
-            </Menu.Item>
+          </Menu.Item>
           {md ? (
             <Menu.Item className="right" key="profile" title="Profile">
-              <NavLink to="/user-profile" style={{color:'cyan'}}>
+              <NavLink to="/user-profile">
                 <UserOutlined />
                 Profile
               </NavLink>
@@ -55,7 +54,6 @@ const MenuItems = () => {
                 <Link to="/user-profile/user-orders">Orders</Link>
               </Menu.Item>
             </SubMenu>
-            
           )}
         </>
       ) : (

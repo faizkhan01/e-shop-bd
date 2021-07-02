@@ -85,7 +85,6 @@ const OrderTable = () => {
       render: (record) => {
         setStatus(record.status);
         return (
-          <div style={{backgroundColor:'cyan'}}>
           <Select
             onChange={(value) => handleStatusChange(value, record)}
             defaultValue={record.status}
@@ -106,7 +105,6 @@ const OrderTable = () => {
               <span style={{ color: "blue" }}>Delivered</span>
             </Option>
           </Select>
-          </div>
         );
       },
     },
@@ -153,7 +151,6 @@ const OrderTable = () => {
         <OrderDetails data={detailData} />
       </Modal>
     </>
-    
   );
 };
 

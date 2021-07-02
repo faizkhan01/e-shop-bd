@@ -2,7 +2,7 @@ import { Button, Input } from "antd";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import cartIcon from "../../assets/cart.png";
+import cartIcon from "../../assects/cart.png";
 import HomeContent from "./Body/HomeContent";
 
 const HomePageItem = () => {

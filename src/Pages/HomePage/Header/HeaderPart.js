@@ -2,8 +2,8 @@ import { Button, Drawer } from "antd";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import cartIcon2 from "../../../assets/cart2.png";
-import logo from "../../../assets/logo.png";
+import cartIcon2 from "../../../assects/cart2.png";
+import logo from "../../../assects/logo.png";
 import MenuItems from "./MenuItems";
 const HeaderPart = () => {
   const [showDrader, setShowDrader] = useState(false);
@@ -13,7 +13,7 @@ const HeaderPart = () => {
     <nav className="menu-bar">
       <div className="logo">
         <Link to="/">
-          <img src={logo} alt="" width="80px" style={{borderRadius: '50px'}} />
+          <img src={logo} alt="" width="70px" />
         </Link>
       </div>
 

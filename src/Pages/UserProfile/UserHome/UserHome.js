@@ -6,9 +6,9 @@ import {
 import { Button, Col, Form, Input, Row } from "antd";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import userImg from "../../../assects/user.png";
 import { updateLoginUser } from "../../../Store/Actions/AutheticationAction";
 import LoadingComponent from "../../LoadingComponent/LoadingComponent";
-
 const UserHome = () => {
   const user = useSelector((state) => state.authentication.user);
   const [editMode, setEditMode] = useState(false);
@@ -34,10 +34,12 @@ const UserHome = () => {
       {loading && <LoadingComponent />}
       <h1 style={{ fontSize: "30px", fontWeight: "700" }}>My Profile</h1>
       <Row className="user-home">
-        
+        <Col md={8} className="user-left">
+          <img src={userImg} alt="user" />
+        </Col>
         {!editMode ? (
-          <Col md={24}>
-            <div className="user-center">
+          <Col md={16}>
+            <div className="user-right">
               <h3>
                 <UserOutlined /> <span className="value"> {user.name}</span>
               </h3>
@@ -60,7 +62,7 @@ const UserHome = () => {
             </div>
           </Col>
         ) : (
-          <Col md={24} className="user-center">
+          <Col md={16} className="user-right">
             <Form
               name="basic"
               initialValues={{
@@ -121,7 +123,7 @@ const UserHome = () => {
                 </Form.Item>
                 <Form.Item>
                   <Button type="primary" onClick={() => setEditMode(false)}>
-                    Cancel
+                    Cancle
                   </Button>
                 </Form.Item>
               </div>

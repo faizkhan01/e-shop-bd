@@ -1,7 +1,7 @@
 import {
   MinusCircleFilled,
   PlusCircleFilled,
-  StarFilled
+  StarFilled,
 } from "@ant-design/icons";
 import { Button, Col, Row } from "antd";
 import React, { useState } from "react";
@@ -10,7 +10,7 @@ import {
   addToCartAction,
   decreaseItemQuantityAction,
   increaseItemQuantityAction,
-  removeFromCartAction
+  removeFromCartAction,
 } from "../../Store/Actions/CartAction";
 
 const DetailSection = (props) => {

@@ -4,7 +4,7 @@ import {
   FETCH_FAILURE,
   FETCH_PRODUCT_DATA,
   FETCH_SUCCESS,
-  UPDATE_PRODUCT
+  UPDATE_PRODUCT,
 } from "../Actions/ProductActions";
 
 const INITIAL_STATE = {

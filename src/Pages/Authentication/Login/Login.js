@@ -19,7 +19,12 @@ const Login = () => {
   }
   const onFinish = async (values) => {
     dispatch(userLogin({ name: values.username, password: values.password }));
-    
+    // .then(() => {
+    //   history.push("/");
+    // })
+    // .catch(() => {
+    //   history.push("/item-order");
+    // });
   };
 
   const onFinishFailed = (errorInfo) => {};
@@ -34,7 +39,7 @@ const Login = () => {
         onFinishFailed={onFinishFailed}
       >
         {Authentication.errMessage && (
-          <p style={{ color: "red" }}>{Authentication.errMessage}</p>
+          <p style={{ color: "red" }}>{Authentication.errMessage && "Incorrect Username or Password"}</p>
         )}
         <Form.Item
           label="Username"

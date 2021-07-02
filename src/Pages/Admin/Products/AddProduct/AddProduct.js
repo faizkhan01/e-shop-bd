@@ -123,7 +123,6 @@ const AddProduct = () => {
                   <Option value="women clothing">Women Clothing</Option>
                   <Option value="jewelery">Jewelery</Option>
                   <Option value="electronics">Electronics</Option>
-                  <Option value="accessories">Mens Accessories</Option>
                 </Select>
               </Form.Item>
               <Form.Item

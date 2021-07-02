@@ -14,7 +14,19 @@ const UserProfileMain = () => {
     <div className="user-container">
       <Layout>
         <Sider style={{ minHeight: "100vh" }} className="user-sider">
-           <Menu
+          {/* <ul>
+            <li>
+              <Link to="/admin/orders">Orders</Link>
+            </li>
+            <li>
+              <Link to="/admin/user-list">User-list</Link>
+            </li>
+            <li>
+              <Link to="/admin/perday-orders">Daily Orders</Link>
+            </li>
+          </ul> */}
+
+          <Menu
             defaultSelectedKeys={["1"]}
             defaultOpenKeys={["sub1"]}
             mode="inline"

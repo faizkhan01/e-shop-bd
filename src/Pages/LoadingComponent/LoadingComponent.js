@@ -1,5 +1,5 @@
 import React from "react";
-import loadingGif from "../../assets/loading.gif";
+import loadingGif from "../../assects/loading.gif";
 const LoadingComponent = () => {
   return (
     <div className="loading-coontainer">

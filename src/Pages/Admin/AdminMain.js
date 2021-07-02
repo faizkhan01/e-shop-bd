@@ -7,7 +7,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Route, Switch, useParams } from "react-router";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../../assects/logo.png";
 import "./admin.css";
 import AdminHeader from "./AdminHeader/AdminHeader";
 import OrderTable from "./OrderTable/OrderTable";
