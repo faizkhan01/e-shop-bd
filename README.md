@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# E-Shop-BD, A MERN Stack E-commerce Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![E-Shop-BD Preview](https://i.imgur.com/p9vcKyF.png)
 
-## Available Scripts
+A full-stack E-commerce app where people can order any product and place order with payment for their desired service. In this web app there is an admin panel. Admin can add new products and make new admins at any time. Admin can also confirm the order status. After providing the products of the clients they can give their reviews.
 
-In the project directory, you can run:
+### Features
+- Responsive Site
+- JWT Authentication
+- Used MongoDB For No SQL Database.
+- User, Admin and Super Admin Dashboard.
 
-### `yarn start`
+### Client 
+- An user can order products, view own Profile information and edit and update all the personal informations at any time.
+- User can post reviews.
+- User will be able to see their order status.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Admin
+- An admin can handle, monitor and manipulate order and product informations.
+- Admin will be able to change the status of orders.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Super Admin
+- Super admin can handle, monitor and manipulate users, orders and product informations.
+- Super Admin has all the rights to do anything at any time in the app.
 
-### `yarn test`
+### Technologies Used 
+- React.js
+- React-Hook-Form
+- React-Redux
+- Redux
+- Redux-Thunk
+- React-Router-Dom
+- JWT Authentication
+- Custom Css
+- Bootstrap
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Heroku deploy
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### [Server Side Repository](https://github.com/faizkhan01/e-shop-bd-backend)

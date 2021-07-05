@@ -8,13 +8,14 @@ import HomePage from "./Pages/HomePage/HomePage";
 import ProtectedRoute from "./Pages/ProtectedRoute/ProtectedRoute";
 import { fetchProducts } from "./Store/Actions/ProductActions";
 export const CartContext = createContext();
-export const getImageUrl = (imgUrl) => {
+export const getImageUrl=imgUrl=>{
   if (imgUrl.includes("https")) {
-    return imgUrl;
-  } else {
-    return "https://mysterious-anchorage-54512.herokuapp.com/images/" + imgUrl;
+    return imgUrl
   }
-};
+  else {
+    return "https://mysterious-anchorage-54512.herokuapp.com/images/"+imgUrl
+  }
+}
 export const axiosHeader = () => {
   const token = localStorage.getItem("token");
   if (token) {
@@ -40,11 +41,10 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        {(user.role === "admin" || user.role === "super") && (
-          <ProtectedRoute path="/admin">
-            <AdminMain />
-          </ProtectedRoute>
-        )}
+        {(user.role == "admin" || user.role =="super") &&<ProtectedRoute path="/admin">
+          <AdminMain />
+        </ProtectedRoute>
+}
 
         <Route path="/">
           <HomePage />

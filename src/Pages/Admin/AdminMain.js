@@ -33,18 +33,20 @@ const AdminMain = () => {
               key={1}
               icon={<img src={logo} width="70" />}
               title="Home"
-            ></Menu.Item>
-            {
-              user.role == "super" && <SubMenu key="sub1" icon={<MailOutlined />} title="Users">
-              <Menu.Item key={2}>
-                <Link to="/admin/user-list">User-list</Link>
-              </Menu.Item>
-              <Menu.Item key={20}>
-                <Link to="/admin/add-user">Add User</Link>
-              </Menu.Item>
-            </SubMenu>
-            }
-            
+            >
+              <Link to="/" />
+            </Menu.Item>
+            {user.role == "super" && (
+              <SubMenu key="sub1" icon={<MailOutlined />} title="Users">
+                <Menu.Item key={2}>
+                  <Link to="/admin/user-list">User-list</Link>
+                </Menu.Item>
+                <Menu.Item key={20}>
+                  <Link to="/admin/add-user">Add User</Link>
+                </Menu.Item>
+              </SubMenu>
+            )}
+
             <SubMenu key="sub2" icon={<AppstoreOutlined />} title="Orders">
               <Menu.Item key={3}>
                 <Link to="/admin/orders/pending">Pending</Link>
@@ -52,15 +54,17 @@ const AdminMain = () => {
               <Menu.Item key={4}>
                 <Link to="/admin/orders/processing">Processing</Link>
               </Menu.Item>
-              {user.role == "super" && (<>
-              <Menu.Item key={10}>
-                <Link to="/admin/orders/date">By Date</Link>
-              </Menu.Item>
-              
-                <Menu.Item key={5}>
-                  <Link to="/admin/orders/delivered">All</Link>
-                </Menu.Item>
-              </>)}
+              {user.role == "super" && (
+                <>
+                  <Menu.Item key={10}>
+                    <Link to="/admin/orders/date">By Date</Link>
+                  </Menu.Item>
+
+                  <Menu.Item key={5}>
+                    <Link to="/admin/orders/delivered">All</Link>
+                  </Menu.Item>
+                </>
+              )}
             </SubMenu>
             <SubMenu key="sub3" icon={<AppstoreOutlined />} title="Products">
               <Menu.Item key={6}>
