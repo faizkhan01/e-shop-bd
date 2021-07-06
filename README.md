@@ -2,7 +2,7 @@
 
 ![E-Shop-BD Preview](https://i.imgur.com/p9vcKyF.png)
 
-A full-stack E-commerce app where people can order any product and place order with payment for their desired service. In this web app there is an admin panel. Admin can add new products and make new admins at any time. Admin can also confirm the order status. After providing the products of the clients they can give their reviews.
+A full-stack E-commerce app where people can order any product and place order with payment for their desired products. In this web app there is an admin panel. Admin can add new products and make new admins at any time. Admin can also confirm the order status. Super admin can handle, monitor and manipulate users, orders and product informations. Super Admin has all the rights to do anything at any time in the app.
 
 ### Features
 - Responsive Site
@@ -11,8 +11,7 @@ A full-stack E-commerce app where people can order any product and place order w
 - User, Admin and Super Admin Dashboard.
 
 ### Client 
-- An user can order products, view own Profile information and edit and update all the personal informations at any time.
-- User can post reviews.
+- An user can see all the products and product details, order products, view own Profile information and edit and update all the personal informations at any time.
 - User will be able to see their order status.
 
 ### Admin
@@ -30,6 +29,7 @@ A full-stack E-commerce app where people can order any product and place order w
 - Redux
 - Redux-Thunk
 - React-Router-Dom
+- Ant Design
 - JWT Authentication
 - Custom Css
 - Bootstrap
